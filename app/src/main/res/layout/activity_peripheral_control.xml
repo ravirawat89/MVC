@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/timepointButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timeButton"
+        android:layout_alignBottom="@+id/timeButton"
+        android:layout_alignStart="@+id/highButton"
+        android:enabled="false"
+        android:onClick="onSendTP"
+        android:text="Send TP" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="name"/>
+
+    <TextView
+        android:id="@+id/valveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="Select Valve :"
+        android:layout_below="@+id/nameTextView"
+        android:textSize="20sp"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/nameTextView"
+        android:layout_toRightOf="@+id/valveText"
+        android:layout_alignTop="@+id/valveText"
+        android:padding="10dp"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:id="@+id/lowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/midButton"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/midButton"
+        android:enabled="false"
+        android:onClick="onLow"
+        android:text="Low" />
+
+    <Button
+        android:id="@+id/midButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:enabled="false"
+        android:onClick="onMid"
+        android:text="Mid" />
+
+    <Button
+        android:id="@+id/highButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/midButton"
+        android:layout_alignBottom="@+id/midButton"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/midButton"
+        android:enabled="false"
+        android:onClick="onHigh"
+        android:text="High" />
+
+    <Button
+        android:id="@+id/potsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timeButton"
+        android:layout_alignBottom="@+id/timeButton"
+        android:layout_alignStart="@+id/lowButton"
+        android:enabled="false"
+        android:onClick="onSetPots"
+        android:text="Set Pots" />
+
+    <Button
+        android:id="@+id/timeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch1"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/lowButton"
+        android:enabled="false"
+        android:onClick="onSetTime"
+        android:text="Set Time" />
+
+    <Button
+        android:id="@+id/batteryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/potsButton"
+        android:layout_below="@+id/flushClose"
+        android:enabled="false"
+        android:onClick="onBattery"
+        android:text="Battery" />
+
+    <Button
+        android:id="@+id/flushClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/batteryButton"
+        android:layout_below="@+id/flushOpen"
+        android:enabled="false"
+        android:onClick="onFlushClose"
+        android:text="FlushClose" />
+
+    <Button
+        android:id="@+id/flushOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/potsButton"
+        android:layout_below="@+id/potsButton"
+        android:enabled="false"
+        android:onClick="onFlushOpen"
+        android:text="FlushOpen" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/timeButton"
+        android:layout_below="@+id/timeButton"
+        android:enabled="false"
+        android:onClick="onStart"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/timepointButton"
+        android:layout_below="@+id/timepointButton"
+        android:enabled="false"
+        android:onClick="onStop"
+        android:text="Stop" />
+
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/startButton"
+        android:layout_below="@+id/startButton"
+        android:enabled="true"
+        android:onClick="onConnect"
+        android:text="Connect" />
+
+    <Button
+        android:id="@+id/logButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/connectButton"
+        android:layout_below="@+id/flushClose"
+        android:enabled="false"
+        android:onClick="onReadLog"
+        android:text="Read Log" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/connectButton"
+        android:layout_alignBottom="@+id/connectButton"
+        android:layout_alignStart="@+id/timepointButton"
+        android:enabled="false"
+        android:onClick="onPause"
+        android:text="Pause" />
+
+    <TextView
+        android:id="@+id/msgTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/potsButton"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/midButton"
+        android:layout_alignRight="@+id/midButton"
+        android:layout_below="@+id/lowButton"
+        android:layout_marginTop="26dp"
+        android:text="Share" />
+
+</RelativeLayout>
